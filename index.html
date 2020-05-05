@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cards - Techies Lab</title>
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <!-- https://images.unsplash.com/photo-1519122295308-bdb40916b529?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80 -->
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,1)), url(https://images.unsplash.com/photo-1513002433973-e0a181372d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80);">
+    <div id="class-languages">
+      <i class="fab fa-html5" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt" style="color: #1970b5"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>FLEXBOX</h1>
+          <h4>et les cartes 🌟</h4>
+        </div>
+      </div>
+      <p>Le but de cette séance est d'utiliser <strong>FLEXBOX</strong> pour aligner nos cartes.</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+
+    <div class="gamification">
+      <div class="progress">
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Etape 1 - Dossier et fichiers
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Pour cette séance, nous allons commencer avec un tout nouveau dossier.</p>
+            <ol>
+              <li><p>Crée un nouveau dossier <code class="language-js">cartes</code>. Fais un click droit et selectionne <code style="background-color:lightgrey; padding: 2px 4px;">New Folder</code>.</p></li>
+              <li>
+                <p>Ensuite glisse le dossier dans ton éditeur de texte (Sublime Text, par exemple), et crée les deux fichiers habituels:</p>
+                <pre class="language-treeview">
+                  <code class="language-treeview">
+                    drapeau/
+                    |-- index.html
+                    |-- style.css
+                  </code>
+                </pre>
+              </li>
+            </ol>
+
+            <p>👇🏽 Voici une animation qui te montre comment proceder:</p>
+            <img class="flexgif" src="images/start.gif" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Etape 2 - Lier ton fichier CSS et ton fichier HTML
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="far fa-square"></i>
+                Petit rappel :
+              </p>
+              <p >Pour selectionner des boites d'un fichier codé en <code class="language-js">HTML</code> depuis un fichier codé en <code class="language-js">CSS</code>, on doit commencer par lier les deux fichiers.</p>
+            </div>
+            <p>Dans la section <code class="language-html">&lt;head></code> de ton fichier <code class="language-js">index.html</code>, ajoute la ligne 5 afin de le lier avec le fichier <code class="language-js">style.css</code>.</p>
+            <pre class="line-numbers language-html">
+              <code class="language-html">&lt;!DOCTYPE html>
+                &lt;html>
+                &lt;head>
+                  ...
+                  &lt;link href="style.css" rel="stylesheet" />
+                &lt;/head>
+                </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Etape 3 - La structure d'une carte
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="alert alert-primary" role="alert">
+              <p>
+                <i class="far fa-square"></i>
+                A quoi ressemble une carte ?
+              </p>
+              <div class="images-holder">
+                <img src="images/card-image.png" alt="" style="width: 39%;">
+                <img src="images/card-frame.png" alt="" style="width: 48%;">
+              </div>
+            </div>
+            <p>Avant de coder cette carte, on va regarder de plus pres la structure de cette dernière.</p>
+            <p>Prends 📝 un crayon et une feuille de papier (je sais... 🤯 pour <code style="background-color:lightgrey; padding: 2px 4px;">coder</code>), et dessine les boites que tu vois (de la plus <strong><em>grande</em></strong> <code>></code> à la plus <strong><em>petite</em></strong>).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Etape 4 - Nommer les boites
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Afin de donner du style à la carte, il faut pouvoir donner un nom clair aux boites qui composent cette carte. </p>
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="far fa-square"></i>
+                Attention:
+              </p>
+              <p>Garde bien en tête que l'objectif est ensuite de pouvoir selectionner ces boîtes depuis le fichier <code class="language-js">CSS</code></p>
+              <pre class="line-numbers language-css">
+                <code class="language-css">selecteur{
+                  propriété: valeur;
+                }</code>
+              </pre>
+              <hr>
+              <p>Question : A ton avis, on va donner des <code class="language-js">class</code> ou des <code class="language-js">id</code> à nos boites ?</p>
+            </div>
+            <p><strong>PAR EXEMPLE :</strong> la semaine dernière, pour l'exercice du drapeau canadien 🇨🇦, nos boites ressemblaient à ceci 👇</p>
+            <img class="flexgif" src="images/flag-boxes.png" alt="">
+            <br>
+            <p class="solution">
+                <button class="btn btn-warning solution-button"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#solutionDesign"
+                        aria-expanded="false"
+                        aria-controls="solutionDesign"
+                        hidden>Solution</button>
+
+                 <form id="form-inline" class="frame-form">
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                      Demande le code à ton instructrice.eur afin d'accéder à la solution de cet exercice.
+                    </small>
+                    <input type="password" class="form-control code" id="inputPassword" placeholder="Code solution">
+                  </div>
+                  <button type="submit" class="btn btn-warning mb-2 frame">Solution</button>
+                </form>
+
+            </p>
+            <div class="collapse" id="solutionDesign">
+              <div class="card card-body">
+                <p> 👇 Voici une solution possible pour nommer tes boites. Pour la suite de l'exercice, nous allons continuer avec cette solution.</p>
+                <img class="flexgif" src="images/solution-card-frame.png" alt="">
+                <br>
+                <div class="alert alert-primary" role="alert">
+                  🤔 Pourquoi utiliser une <code class="language-js">class</code> pour carte ?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" disabled>
+              Etape 5 - Coder la carte en HTML
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Maintenant il faut coder la carte 💪🏽</p>
+            <p>Dans le fichier <code class="language-js">index.html</code>, nous allons donc créer une première <code class="language-js">div</code> qui va avoir une <code class="language-js">class</code> appellée <code>carte</code>. Celle-ci contient 3 autres <code class="language-js">div</code> qui ont des <code class="language-js">class</code> différentes : </p>
+            <pre class="line-numbers language-html">
+              <code class="language-html">&lt;body>
+                &lt;div class="carte">
+                  &lt;div class="avatar">&lt;/div>
+                  &lt;div class="description">&lt;/div>
+                  &lt;div class="scores">
+                    &lsaquo;&ndash;&ndash; #A FAIRE: code içi la div .score &ndash;&ndash;&rsaquo;
+                    &lsaquo;&ndash;&ndash; #A FAIRE: code içi la div .score &ndash;&ndash;&rsaquo;
+                    &lsaquo;&ndash;&ndash; #A FAIRE: code içi la div .score &ndash;&ndash;&rsaquo;
+                  &lt;/div>
+                &lt;/div>
+              &lt;/body></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" disabled>
+              Etape 6 - Styler la carte
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Il est temps de donner du style à notre carte 👘.</p>
+            <div class="alert alert-warning" role="alert">
+              <p>
+                <i class="far fa-square"></i>
+                Petit rappel :
+              </p>
+              <p >Pour selectionner depuis <code class="language-js">style.css</code> une boite avec une <code class="language-js">class</code>, on utilise le  <code class="language-js">.</code></p>
+            </div>
+            <pre class="line-numbers language-css">
+              <code class="language-css">.carte{
+                height: 300px;
+                width: 100px;
+                background-color: #cce5ff;
+                border: 1px solid black;
+                border-radius: 10px;
+                box-shadow: 1px 1px 5px -2px black;
+                padding: 10px;
+              }</code>
+            </pre>
+            <br>
+            <div class="alert alert-primary" role="alert">
+              👉🏽 Maintenant, tu peux faire un click droit et <code style="background-color:lightgrey; padding: 2px 4px;">Open in Browser</code> afin de visualiser le résultat.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed task" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" disabled>
+              <span>Etape 7 - Styler l'interieur de la carte</span>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="alert alert-primary" role="alert">
+              A présent, nous allons créer du <code class="language-js">CSS</code> pour les boites qui sont à l'interieur de notre magnifique carte 🌈
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSeven_1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven_1" aria-expanded="false" aria-controls="collapseSeven_1">
+                    1️⃣ Styler l'avatar 🖼
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSeven_1" class="collapse 7" aria-labelledby="headingSeven_1" data-parent="#collapseSeven">
+                <div class="card-body" style="background: #00000013;">
+                  <p>Notre avatar va faire 40% de la hauteur de notre carte. Ca te parait bien ? 🧐</p>
+                  <pre class="line-numbers language-css">
+                    <code class="language-css">.avatar{
+                      height: 40%;
+                      width: 100%;
+                      background-color: #1DB100;
+                      border: 1px solid #3D7F25;
+                    }</code>
+                  </pre>
+                  <div class="alert alert-warning" role="alert">
+                    🤓 Tu auras remarqué que nous n'exprimons pas notre dimension en <strong><em>pixel</em></strong> mais en <strong><em>pourcentage</em></strong> cette fois!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSeven_2">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven_2" aria-expanded="false" aria-controls="collapseSeven_2">
+                    2️⃣ Styler la description ✏️
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSeven_2" class="collapse" aria-labelledby="headingSeven_2" data-parent="#collapseSeven">
+                <div class="card-body" style="background: #00000013;">
+                  <p>Notre description va également occuper 40% de la hauteur de notre carte.</p>
+                  <pre class="line-numbers language-css">
+                    <code class="language-css">.description{
+                      height: 👉 AJOUTE LA BONNE VALEUR ICI 👈;
+                      width: 100%;
+                      background-color: #D41876;
+                      border: 1px solid #97265C;
+                    }</code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSeven_3">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven_3" aria-expanded="false" aria-controls="collapseSeven_3">
+                    3️⃣ Styler la boite <code class="language-js">.scoreS</code> 🥇
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSeven_3" class="collapse" aria-labelledby="headingSeven_3" data-parent="#collapseSeven">
+                <div class="card-body" style="background: #00000013;">
+                  <p>La grande boite <code class="language-js">.scores</code> va occuper l'espace restant. C'est à dire ?</p>
+                  <pre class="line-numbers language-css">
+                    <code class="language-css">.scores{
+                      height: 👉 AJOUTE LA BONNE VALEUR ICI 👈;
+                      width: 100%;
+                      background-color: #00AB8E;
+                      border: 1px solid #3B8370;
+                      padding: 1px;
+                    }</code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingSeven_4">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven_4" aria-expanded="false" aria-controls="collapseSeven_4">
+                    3️⃣ Styler les boites <code class="language-js">.score</code> 🏆
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSeven_4" class="collapse" aria-labelledby="headingSeven_4" data-parent="#collapseSeven">
+                <div class="card-body" style="background: #00000013;">
+                  <p>Quelles sont les dimensions des petites boites <code class="language-js">.score</code> par rapport à la boite <code class="language-js">.scoreS</code>?</p>
+                  <pre class="line-numbers language-css">
+                    <code class="language-css">.score{
+                      height: 👉 AJOUTE LA BONNE VALEUR ICI 👈;
+                      width: 👉 AJOUTE LA BONNE VALEUR ICI 👈;
+                      background-color: #0076BA;
+                      border: 1px solid #265889;
+                    }</code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link task collapsed" type="button" data-toggle="collapse" data-target="#collapseHeigth" aria-expanded="false" aria-controls="collapseHeigth" disabled>
+              Etape 8 - Flexbox les scores
+            </button>
+          </h2>
+        </div>
+        <div id="collapseHeigth" class="collapse" aria-labelledby="headingHeigth" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>👏 <strong>Bravo</strong>!</p>
+            <p>Il y a un petit probleme quand même. Nos boites <code class="language-js">.score</code> sont les unes sur les autres 😅</p>
+            <div class="alert alert-warning" role="alert">
+              <h4 class="alert-heading">
+                <i class="fas fa-info-circle"></i>
+                FLEXBOX
+              </h4>
+              <p>Rappel: Afin d'aligner des boites horizontalement, tu peux utiliser la propiété suivante:
+                <pre class="line-numbers language-css">
+                  <code class="language-css">display: flex;</code>
+                </pre>
+              </p>
+              <hr>
+              <p class="mb-0">Le tout est de mettre cette propriété au bon endroit... 👩🏽‍💻.</p>
+            </div>
+            <p class="solution">
+                <button class="btn btn-warning solution-button"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#solutionFlex"
+                        aria-expanded="false"
+                        aria-controls="solutionFlex"
+                        >Solution</button>
+                <span data-toggle="tooltip" title="Pas si vite 😂 Tu dois d'abord lire la documentation 📚, et tester dans ton code!"><i class="fas fa-question"></i></span>
+            </p>
+            <div class="collapse" id="solutionFlex">
+              <div class="card card-body">
+                <p> 👇 Voici le code qui solutionne notre petit soucis :</p>
+                <pre class="line-numbers language-css">
+                    <code class="language-css">.scores{
+                      AJOUTE CETTE LIGNE
+                      display: flex;
+                    }</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link task collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" disabled>
+              <span>Etape 9 - Ajouter une image</span>
+              <span class="badge badge-warning">Difficile 🏆</span>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>🎉 <strong>Félicitations d'être arrivé aussi loin</strong>!</p>
+            <p>Nous n'avons toujours pas notre image dans la boite <code class="language-js">.avatar</code></p>
+            <div class="alert alert-primary" role="alert">
+              <h4 class="alert-heading">
+                <i class="fas fa-info-circle"></i>
+                THEORIE
+              </h4>
+              <p>On veut que notre image prenne la taille de la boite <code>.avatar</code>, sans qu'elle ne se déforme. Pour y arriver, on introduit un nouveau concept. C'est celui de :
+                <pre class="line-numbers language-css">
+                  <code class="language-css">background-image: url("AjOuTe UnE AdReSsE d'ImAgE iCi");</code>
+                </pre>
+              </p>
+              <hr>
+              <p class="mb-0">Si tu te rends compte qu'il y a un souci avec ton image, voici un peu de
+              <a href="https://la-cascade.io/les-proprietes-css-background/#background-image" rel="noopener noreferrer" target="_blank" id="task-nine" class="alert-link">lecture</a>. On corrige à la prochaine séance 🤓.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+      <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="footer-copyright">
+      <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+        <i class="far fa-copyright"></i>
+        2020 Techies Lab ASBL. All rights reserved.
+      </a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="javascript/prism.js"></script>
+  <script type="text/javascript" src="javascript/app.js"></script>
+  <script type="text/javascript" src="javascript/unlock.js"></script>
+</body>
+</html>
