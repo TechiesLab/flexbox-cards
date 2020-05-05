@@ -1,3 +1,5 @@
+// Session CODE : FLXII20
+
 // Enables tooltips everywhere
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -12,12 +14,12 @@ const errorMessage = document.querySelector('.alert-danger')
 // ############################################################################
 
 const animate = () => {
-  let progress = parseInt(localStorage.getItem('progress'))
+  let progress = parseInt(localStorage.getItem('FLXII20'))
 
   // Intialize the localStorage
   if(!progress){
     progress = 10
-    localStorage.setItem('progress', progress)
+    localStorage.setItem('FLXII20', progress)
   }
 
   // Initialize the progress bar
@@ -55,8 +57,8 @@ const progressCompute = (currentIndex) => {
 
   // Store the value in the LS, only if it's the first time the user completes this
   // task.
-  if(currentProgress > parseInt(localStorage.getItem('progress'))){
-    localStorage.setItem('progress', currentProgress)
+  if(currentProgress > parseInt(localStorage.getItem('FLXII20'))){
+    localStorage.setItem('FLXII20', currentProgress)
   }
 }
 
@@ -71,7 +73,7 @@ const progressBarAnimation = (e) => {
   const currentTask = tasksArray.indexOf(e.currentTarget) + 1
   // console.log('current task index :', currentTask)
 
-  const lastTaskDone = Math.round(localStorage.getItem('progress') * tasksArray.length / 100)
+  const lastTaskDone = Math.round(localStorage.getItem('FLXII20') * tasksArray.length / 100)
   const taskToDo = lastTaskDone + 1
 
   if(taskToDo < currentTask){
